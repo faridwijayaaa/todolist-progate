@@ -1,25 +1,28 @@
+import React, { useState } from 'react';
+import { Header } from './components/Header';
+import { Form } from './components/Form';
+import { List } from './components/List';
 import './App.css';
 
+
 function App() {  
+  const [input, setInput] = useState("");
+  const [todos, setTodos] = useState([]);
+
   return (
-    <div className="container">
-      <h1>To-Do List</h1>
+    <div className='container'>
+      <Header />
       <div className='wrapper-add'>
-        <input type='text' placeholder='Add you need'/>
-        <input type='submit' value='ADD' />
+        <Form 
+          input={input}
+          setInput={setInput}
+          todos={todos}
+          setTodos={setTodos}
+        />
       </div>
-
-      <div className='content'>
-        <input type='checkbox'/>
-        <input type='text' disabled/>
-        <input type='submit' value='CLEAR' /> 
-      </div>  
-
-      <div className='content'>
-        <input type='checkbox'/>
-        <input type='text' disabled/>
-        <input type='submit' value='CLEAR' /> 
-      </div>  
+      <div className='todos-list'>
+        <List todos={todos} setTodos={setTodos} />
+      </div>
     </div>
   );
 }

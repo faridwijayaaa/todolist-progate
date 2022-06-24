@@ -7,8 +7,11 @@
   --secondary-color: #51557E;
   --third-color: #816797;
   --fourth-color: #D6D5A8;
-  --delete-color: #ff0707;
   font-family: 'Kdam Thmor Pro', sans-serif;
+}
+
+li {
+  list-style: none;
 }
 
 body {
@@ -24,6 +27,7 @@ body {
   width: 50%;
   padding: 40px;
   border-radius: 10px;
+  box-shadow: 5px 5px 10px #FFF;
 }
 
 h1 {
@@ -41,7 +45,7 @@ input[type="text"] {
   margin-right: 10px;
 }
 
-input[type="submit"] {
+button {
   cursor: pointer;
   color: var(--fourth-color);  
   border-style: none;
@@ -58,7 +62,7 @@ input[type="checkbox"] {
 }
 
 .wrapper-add {
-  margin: 10px auto 50px auto;
+  margin: 10px auto 25px auto;
   text-align: center;
 }
 
@@ -67,34 +71,66 @@ input[type="checkbox"] {
 }
 
 .wrapper-add input[type="text"]  {
-  width: 30em;
+  width: 65%;
   text-align: center;
 }
 
-.wrapper-add input[type="submit"]  {
-  background-color: var(--secondary-color);
+.wrapper-add button  {
+  background-color: #242d70;
 }
 
-.wrapper-add input[type="submit"]:hover  {
-  width: 100px;
+.wrapper-add button:hover  {
+  width: 15%;
   background-color: #242d70;
   color: #FFF;
 }
 
 .content {
-  margin: 25px 0;
+  margin: 15px 0;
 }
 
 .content input[type="text"]  {
-  width: 26em;
-  background-color: rgb(206, 206, 206);
+  margin-left: 10px;
+  width: 60%;
+  background-color: rgba(255, 255, 255, 0);
+  color: var(--primary-color);
+  border-color: var(--third-color);
 }
 
-.content input[type="submit"] {
-  color: #FFF;
-  background-color: #d62e2e;
+.content button {
+  color: var(--secondary-color);
+  padding: 0;
+  top: -42px;
+  left: 160px;
 }
 
-.content input[type="submit"]:hover {
-  background-color: var(--delete-color);
+.task-btn i{
+  padding: 6px;
+  margin-right: 5px;
+  border-radius: 15px;
 }
+
+.btn-complete, .btn-edit, .btn-delete {
+  border: none;
+  outline: none;
+  background-color: transparent;
+  font-size: 20px;
+}
+
+.btn-complete:focus {
+  color: rgb(77, 172, 86);
+}
+
+.btn-edit:active {
+  color: #ac8e0a;
+}
+
+
+.btn-delete:active {
+  color: rgb(177, 25, 25);
+}
+
+.btn {
+  display: inline-block;
+}
+
