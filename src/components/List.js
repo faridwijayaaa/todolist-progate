@@ -1,6 +1,7 @@
 import React from 'react'
 
-export const List = ({todos, setTodos}) => {
+export const List = ({todos, setTodos, setEditTodo}) => {
+    
     const handleCompleted = (todo) => {
         setTodos(
             todos.map((item) => {
@@ -9,9 +10,13 @@ export const List = ({todos, setTodos}) => {
                 }
                 return item;
             })
-        )
+            )
+        }
+    const handleEdit = ({ id }) => {
+        const findTodo = todos.find((todo) => todo.id === id);
+        setEditTodo(findTodo);
     }
-
+        
     const handleDelete = ({ id }) => {
         setTodos(todos.filter((todo) => todo.id !== id));
     }
@@ -21,7 +26,8 @@ export const List = ({todos, setTodos}) => {
         {todos.map((todo) => (
             <li className='content' key={todo.id}>
                 <input 
-                    type='text' 
+                    type='text'
+                    className={`${todo.completed ? "completed" : ""}`}
                     value={todo.title} 
                     onChange={(event) => event.preventDefault()} 
                     disabled
@@ -31,7 +37,7 @@ export const List = ({todos, setTodos}) => {
                         <i class="fa-solid fa-circle-check"></i>
                     </button>
 
-                    <button className='btn-edit task-btn'>
+                    <button className='btn-edit task-btn' onClick={() => handleEdit(todo)}>
                         <i class="fa-solid fa-pen-to-square"></i>
                     </button>
 
@@ -39,8 +45,6 @@ export const List = ({todos, setTodos}) => {
                         <i class="fa-solid fa-trash"></i>
                     </button>
                 </div>
-                
-
             </li>    
         )
 
