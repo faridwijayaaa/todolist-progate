@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/todolist-progate/static/css/main.25d9007e.css",
+    "main.js": "/todolist-progate/static/js/main.02fa17db.js",
+    "index.html": "/todolist-progate/index.html",
+    "main.25d9007e.css.map": "/todolist-progate/static/css/main.25d9007e.css.map",
+    "main.02fa17db.js.map": "/todolist-progate/static/js/main.02fa17db.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.25d9007e.css",
+    "static/js/main.02fa17db.js"
+  ]
+}
