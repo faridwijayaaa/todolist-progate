@@ -45,7 +45,7 @@ input[type="text"] {
   margin-right: 10px;
 }
 
-button {
+button[type="submit"] {
   cursor: pointer;
   color: var(--fourth-color);  
   border-style: none;
@@ -68,14 +68,21 @@ button {
   text-align: center;
 }
 
-.wrapper-add button  {
+.wrapper-add button[type="submit"]  {
   background-color: #242d70;
 }
 
-.wrapper-add button:hover  {
+.wrapper-add button[type="submit"]:hover  {
   width: 15%;
   background-color: #242d70;
   color: #FFF;
+}
+
+.wrapper-add p {
+  font-size: 15px;
+  text-align: left;
+  position: relative;
+  left: 50px;
 }
 
 .content {
@@ -90,11 +97,12 @@ button {
   border-color: var(--third-color);
 }
 
-.content button {
+button {
   color: var(--secondary-color);
   padding: 0;
   top: -42px;
   left: 160px;
+  cursor: pointer;
 }
 
 .task-btn i{
@@ -103,7 +111,7 @@ button {
   border-radius: 15px;
 }
 
-.btn-complete, .btn-edit, .btn-delete {
+.btn-complete, .btn-edit, .btn-delete, .btn-microphone {
   border: none;
   outline: none;
   background-color: transparent;
@@ -121,6 +129,16 @@ button {
 
 .btn-delete:active {
   color: rgb(177, 25, 25);
+}
+
+.btn-microphone {
+  border-radius: 50%;
+  padding: 2px;
+  margin-right: 5px;
+}
+
+.btn-microphone:active{
+  color: rgb(49, 49, 49);
 }
 
 .btn {
